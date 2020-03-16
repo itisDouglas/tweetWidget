@@ -1,8 +1,9 @@
 #A simple widget for sending tweets to my twitter without all the overhead in the app itself
 from tkinter import *
 import twitter
+import keys
 
-api = twitter.Api(#API secret keys here)
+api = twitter.Api(consumer_key= keys.CONSUMER_KEY, consumer_secret=keys.CONSUMER_SECRET, access_token_key=keys.ACCESS_TOKEN_KEY,access_token_secret=keys.ACCESS_TOKEN_SECRET)
 
 class Application(Frame):
     def __init__(self, master):
